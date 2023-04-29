@@ -1,0 +1,122 @@
+
+/* Form alinhamento na tela */
+form {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* Form tabela */
+form {
+  border: 2px solid black;
+  padding: 20px;
+  max-width: 400px;
+  max-height: 320px;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.form-group  label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+
+/* Ajustando nome para ficar acima do inputText */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%; /* faz com que cada campo ocupe a largura total disponível */
+  padding: 5px; /* adiciona um preenchimento interno ao campo */
+  border: none; /* remove a borda padrão do campo */
+  border-bottom: 1px solid black; /* adiciona uma borda inferior */
+  box-sizing: border-box; /* faz com que a borda e o padding sejam incluídos no tamanho total do elemento */
+}
+
+.button-send{
+  padding-top: 10px;
+}
+
+.button-send button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.4s ease;
+  -webkit-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -ms-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+}
+
+
+.button-send button:hover {
+  background-color: #237a26;
+  transition: background-color 0.4s ease-in-out;
+
+}
+
+/* Navbar estilização */
+
+nav {
+  background-color: #333;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.4s ease;
+
+}
+
+nav a:hover {
+  background-color: #555;
+  transition: background-color 0.4s ease-in-out;
+
+}

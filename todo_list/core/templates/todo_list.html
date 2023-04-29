@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/lista.css" />
+
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="todo_list">Home</a></li>
+        <li><a href="cadastro">Cadastro</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Lista de Tarefas</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome da Tarefa</th>
+            <th>Descrição</th>
+            <th>Data da Tarefa</th>
+            <th>Data de Criação</th>
+          </tr>
+        </thead>
+        <tbody id="tarefas">
+            {% for dado in dados %}
+            <tr>
+              <td>{{ dado.id }}</td>
+              <td>{{ dado.nome_tarefa }}</td>
+              <td>{{ dado.descricao }}</td>
+              <td>{{ dado.data_tarefa }}</td>
+              <td>{{ dado.data_hora_add }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+    </main>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
