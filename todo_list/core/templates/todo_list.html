@@ -5,16 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/css/lista.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css" />
 
     <title>Lista de Tarefas</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="todo_list">Home</a></li>
-        <li><a href="cadastro">Cadastro</a></li>
-      </ul>
-    </nav>
+    {% include "./components/navbar.html" %}
     <main>
       <h1>Lista de Tarefas</h1>
       <table>
@@ -25,18 +21,30 @@
             <th>Descrição</th>
             <th>Data da Tarefa</th>
             <th>Data de Criação</th>
+            <th>Excluir</th>
+            <th>Editar</th>
           </tr>
         </thead>
         <tbody id="tarefas">
-            {% for dado in dados %}
-            <tr>
-              <td>{{ dado.id }}</td>
-              <td>{{ dado.nome_tarefa }}</td>
-              <td>{{ dado.descricao }}</td>
-              <td>{{ dado.data_tarefa }}</td>
-              <td>{{ dado.data_hora_add }}</td>
-            </tr>
-            {% endfor %}
+          {% for dado in dados %}
+          <tr>
+            <td>{{ dado.id }}</td>
+            <td>{{ dado.nome_tarefa }}</td>
+            <td>{{ dado.descricao }}</td>
+            <td>{{ dado.data_tarefa }}</td>
+            <td>{{ dado.data_hora_add }}</td>
+            <td>
+              <button class="excluir-tarefa" data-tarefa="{{ deletar_objeto }}">
+                Excluir
+              </button>
+            </td>
+            <td>
+              <button class="editar-tarefa" data-tarefa="{{ dado.id }}">
+                Editar
+              </button>
+            </td>
+          </tr>
+          {% endfor %}
         </tbody>
       </table>
     </main>
