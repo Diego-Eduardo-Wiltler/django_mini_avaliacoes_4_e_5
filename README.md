@@ -47,7 +47,6 @@ Acesse o endereço http://127.0.0.1:8000/ em seu navegador para utilizar a aplic
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Attenuare"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102560265?v=4" width="100px;" alt=""/><br /><sub><b>Leandro Alves</b></sub></a><br /><a href="https://github.com/Attenuare" title="BoorBook">🚀</a></td>
     <td align="center"><a href="https://github.com/Diego-Eduardo-Wiltler"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90121713?v=4" width="100px;" alt=""/><br /><sub><b>Diego Wiltler</b></sub></a><br /><a href="https://github.com/Diego-Eduardo-Wiltler" title="BoorBook">🚀</a></td>
     <td align="center"><a href="https://github.com/Klayvert2003"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80418636?v=4" width="100px;" alt=""/><br /><sub><b>Klayvert Alves</b></sub></a><br /><a href="https://github.com/Klayvert2003" title="BoorBook">🚀</a></td>
   </tr>
