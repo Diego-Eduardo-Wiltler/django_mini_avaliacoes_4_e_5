@@ -1,0 +1,13 @@
+{% block content %}
+    <h1>Editar Tarefa</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nome_tarefa">Nome da Tarefa:</label>
+        <input type="text" id="nome_tarefa" name="nome_tarefa" value="{{ dado.nome_tarefa }}"><br>
+        <label for="data_hora_add">Data:</label>
+        <input type="date" id="data_hora_add" name="data_hora_add" value="{{ dado.data_tarefa }}"><br>
+        <label for="descricao_task">Descrição:</label><br>
+        <textarea id="descricao_task" name="descricao_task" rows="5" cols="50">{{ dado.descricao }}</textarea><br>
+        <input type="submit" value="Salvar">
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% block content %}
+    <h1>Confirmar Exclusão</h1>
+    <p>Tem certeza que deseja excluir a tarefa "{{ dado.nome_tarefa }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirmar">
+        <a href="{% url 'todo_list' %}">Cancelar</a>
+    </form>
+{% endblock %}
