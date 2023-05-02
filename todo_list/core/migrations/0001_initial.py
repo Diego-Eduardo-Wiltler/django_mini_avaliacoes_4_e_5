@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nome_tarefa', models.CharField(max_length=150, verbose_name='nome_tarefa')),
-                ('data_tarefa', models.CharField(max_length=30, verbose_name='data_hora_add')),
+                ('data_tarefa', models.CharField(max_length=30, verbose_name='data_tarefa')),
                 ('descricao', models.CharField(max_length=150, verbose_name='descricao')),
                 ('data_hora_add', models.DateTimeField(auto_now_add=True, verbose_name='data_hora_add')),
             ],
