@@ -1,9 +1,21 @@
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>Confirmar Exclusão</title>
+  </head>
+  <body>
+    {% block content %}
     <h1>Confirmar Exclusão</h1>
     <p>Tem certeza que deseja excluir a tarefa "{{ dado.nome_tarefa }}"?</p>
     <form method="post">
-        {% csrf_token %}
-        <input type="submit" value="Confirmar">
-        <a href="{% url 'todo_list' %}">Cancelar</a>
+      {% csrf_token %}
+      <input type="submit" value="Confirmar" />
+      <a href="{% url 'todo_list' %}">Cancelar</a>
     </form>
-{% endblock %}
+    {% endblock %}
+  </body>
+</html>
