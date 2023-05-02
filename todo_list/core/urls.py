@@ -1,8 +1,9 @@
-from django.urls import path, include
-from . import views
-from .views import CadastroView, TaskList
+from django.urls import path
+from core.views import CadastroView, TaskList, EditarView, DeletarView
 
 urlpatterns = [
-    path('todo_list', TaskList.as_view(), name='todo_list'),
-    path('cadastro', CadastroView.as_view(), name='cadastro')
+    path('', TaskList.as_view(), name='todo_list'),
+    path('cadastro/', CadastroView.as_view(), name='cadastro'),
+    path('editar/<int:id>/', EditarView.as_view(), name='editar'),
+    path('deletar/<int:id>/', DeletarView.as_view(), name='deletar'),
 ]
