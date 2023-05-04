@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,10 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/css/style.css" />
     <link rel="stylesheet" href="../static/css/navbar.css" />
+    <script src="{% static 'js/script.js' %}"></script>
     <title>cadastro</title>
   </head>
   <body>
     {% include "./components/navbar.html" %}
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <h1>Cadastro</h1>
+    </center>
     <form action="{% url 'cadastro' %}" method="POST">
       {% csrf_token %}
       <div class="form-group">
@@ -30,7 +41,9 @@
         ></textarea>
       </div>
       <div class="button-send">
-        <button type="submit">Adicionar Tarefa</button>
+        <button type="submit" onsubmit="return ValidaClick()">
+          Adicionar Tarefa
+        </button>
       </div>
     </form>
   </body>
