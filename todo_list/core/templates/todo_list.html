@@ -12,6 +12,9 @@
   <body>
     {% include "./components/navbar.html" %}
     <main>
+      {% if not dados %}
+      <h1>Nenhuma ativade para hoje</h1>
+      {% else %}
       <h1>Lista de Tarefas</h1>
       <table>
         <thead>
@@ -25,6 +28,7 @@
             <th>Excluir</th>
           </tr>
         </thead>
+        {% endif %}
         <tbody id="tarefas">
           {% for dado in dados %}
           <tr>
@@ -55,6 +59,5 @@
         </tbody>
       </table>
     </main>
-    <script src="../static/js/script.js"></script>
   </body>
 </html>
