@@ -12,6 +12,9 @@
   <body>
     {% include "./components/navbar.html" %}
     <main>
+      {% if not dados %}
+      <h1>Nenhuma ativade para hoje</h1>
+      {% else %}
       <h1>Lista de Tarefas</h1>
       <table>
         <thead>
@@ -21,10 +24,11 @@
             <th>Descrição</th>
             <th>Data da Tarefa</th>
             <th>Data de Criação</th>
-            <th>Excluir</th>
             <th>Editar</th>
+            <th>Excluir</th>
           </tr>
         </thead>
+        {% endif %}
         <tbody id="tarefas">
           {% for dado in dados %}
           <tr>
@@ -33,14 +37,27 @@
             <td>{{ dado.descricao }}</td>
             <td>{{ dado.data_tarefa }}</td>
             <td>{{ dado.data_hora_add }}</td>
-            <td><a href="{% url 'editar' dado.id %}">Editar</a></td>
-            <td><a href="{% url 'deletar' dado.id %}">Excluir</a></td>
+
+            <td>
+              <button
+                class="editar-tarefa"
+                onclick="window.location.href='{% url 'editar' dado.id %}'"
+              >
+                Editar
+              </button>
+            </td>
+            <td>
+              <button
+                class="excluir-tarefa"
+                onclick="window.location.href='{% url 'deletar' dado.id %}'"
+              >
+                Excluir
+              </button>
             </td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
     </main>
-    <script src="../static/js/script.js"></script>
   </body>
 </html>
