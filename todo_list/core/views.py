@@ -12,12 +12,13 @@ class CadastroView(View):
     def post(self, request):
         nome_tarefa = request.POST.get('nome_tarefa')
         data_tarefa = request.POST.get('data_hora_add')
-        data_formatada = datetime.strptime(data_tarefa, '%Y-%m-%d')
-        hoje = datetime.now().replace(minute=0, second=0)
-        if data_formatada < hoje - timedelta(days=1):
-            erro_date = HttpResponse('Insira apenas datas de hoje em diante!!!')
-            erro_date['refresh'] = '3;url=/cadastro/'
-            return erro_date
+        if data_tarefa:
+            data_formatada = datetime.strptime(data_tarefa, '%Y-%m-%d')
+            hoje = datetime.now().replace(minute=0, second=0)
+            if data_formatada < hoje - timedelta(days=1):
+                erro_date = HttpResponse('Insira apenas datas de hoje em diante!!!')
+                erro_date['refresh'] = '3;url=/cadastro/'
+                return erro_date
 
         descricao = request.POST.get('descricao_task')
         dados = {'nome_tarefa': nome_tarefa, 'data_tarefa': data_tarefa, 'descricao': descricao}
